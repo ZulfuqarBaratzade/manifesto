@@ -12,3 +12,14 @@ class MainBannerAdmin(admin.ModelAdmin):
 
     class Meta:
         model = MainBanner
+@admin.register(Logo)
+
+class LogoAdmin(admin.ModelAdmin):
+    list_display=['id','name','file','updated_date','created_date']
+
+    search_fields = ['id','name']
+    list_editable=['file']
+
+    class Meta:
+        model = Logo
+
