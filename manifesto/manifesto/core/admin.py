@@ -33,13 +33,13 @@ class FoodAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Food
-@admin.register(Dessert)
+@admin.register(BussinessLunch)
 
-class DessertAdmin(admin.ModelAdmin):
+class BussinessLunchAdmin(admin.ModelAdmin):
     list_display=['id','order','name','price','file','updated_date','created_date']
 
     search_fields = ['id','name']
     list_editable=['file','price']
 
     class Meta:
-        model = Dessert
+        model = BussinessLunch

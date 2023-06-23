@@ -7,12 +7,13 @@ def layout(request):
     mainlogo = MainBanner.objects.all()
     food = Food.objects.all()
     dessert = Dessert.objects.all()
-
+    lunch = BussinessLunch.objects.all()
     context = {
         'logo':logo,
         'mainlogo':mainlogo,
         'food':food,
         'dessert':dessert,
+        'lunch':lunch,
     }
     return context
 def index(request):
