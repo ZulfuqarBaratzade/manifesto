@@ -90,3 +90,33 @@ class Food(AbstractModel):
         verbose_name = "Food"
         verbose_name_plural = "Food"
         ordering = ('name',)
+class Dessert(AbstractModel):
+    order = models.IntegerField(
+        default=0,
+        verbose_name='Order',
+    )
+    name = models.CharField(
+        default='',
+        max_length=254,
+        blank=True,
+        verbose_name='name',
+
+    )
+    price = models.IntegerField(
+        default=0,
+        blank=True,
+        verbose_name='price'
+    )
+    file = models.ImageField(
+        default='',
+        help_text='',
+        verbose_name='Image',
+        blank=True,
+        upload_to='images/dessert',
+    )
+    def __str__(self):
+        return f"Dessert : {self.name}"
+    class Meta:
+        verbose_name = "Dessert"
+        verbose_name_plural = "Dessert"
+        ordering = ('name',)
