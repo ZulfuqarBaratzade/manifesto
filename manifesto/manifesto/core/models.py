@@ -180,3 +180,26 @@ class Drink(AbstractModel):
         verbose_name = "Drink"
         verbose_name_plural = "Drink"
         ordering = ('name',)
+
+
+
+class TextGoal(AbstractModel):
+    name = models.CharField(
+        default='',
+        max_length=254,
+        blank=True,
+        verbose_name='name',
+
+    )
+    description=models.CharField(
+        default='',
+        max_length=600,
+        blank=True,
+        verbose_name='description',
+    )
+    def __str__(self):
+        return f"Text Goal: {self.name}"
+    class Meta:
+        verbose_name = "Text Goal"
+        verbose_name_plural = "Text Goal"
+        ordering = ('name',)

@@ -1,0 +1,17 @@
+<!-- ***** Text Goal Area Starts ***** -->
+<br>
+<h1 style="text-align: center; text-decoration: bold;" > Manifestonun Manifestosu </h1>
+<section class="section" id="explore" style="position: relative; right: 100;">
+    <div class="container">
+                {% for texts in text %}
+                <div class="left-content">
+                    <h2>{{ texts.name }}</h2>
+                    <p>{{ texts.description}}</p>
+                </div>
+                <hr>
+                <br>
+                <br>                
+                {% endfor %}
+    </div>
+</section>
+<!-- ***** Text Goal Area Ends ***** -->    

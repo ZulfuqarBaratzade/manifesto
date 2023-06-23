@@ -53,3 +53,13 @@ class DrinkAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Drink
+@admin.register(TextGoal)
+
+class TextGoalAdmin(admin.ModelAdmin):
+    list_display=['id','name','description','updated_date','created_date']
+
+    search_fields = ['id','name']
+    list_editable=['name','description']
+
+    class Meta:
+        model = TextGoal
