@@ -33,6 +33,16 @@ class FoodAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Food
+@admin.register(Dessert)
+
+class DessertAdmin(admin.ModelAdmin):
+    list_display=['id','order','name','price','file','updated_date','created_date']
+
+    search_fields = ['id','name']
+    list_editable=['file','price']
+
+    class Meta:
+        model = Dessert
 @admin.register(BussinessLunch)
 
 class BussinessLunchAdmin(admin.ModelAdmin):
@@ -63,3 +73,12 @@ class TextGoalAdmin(admin.ModelAdmin):
 
     class Meta:
         model = TextGoal
+@admin.register(SocialMedia)
+class SocialMediaAdmin(admin.ModelAdmin):
+    list_display=['id','order','link','icon','updated_date','created_date']
+
+    search_fields = ['order','link','icon']
+    list_editable=['link','icon',]
+
+    class Meta:
+        model = SocialMedia

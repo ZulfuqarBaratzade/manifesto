@@ -203,3 +203,21 @@ class TextGoal(AbstractModel):
         verbose_name = "Text Goal"
         verbose_name_plural = "Text Goal"
         ordering = ('name',)
+
+class SocialMedia(AbstractModel):
+    order = models.IntegerField(
+        default=0,
+        verbose_name='Order',
+    )
+    link = models.URLField(
+        default='',
+        max_length=254,
+        blank=True,
+        verbose_name='Link',
+    )
+    icon = models.CharField(
+        default='',
+        max_length=254,
+        blank=True,
+        verbose_name='Icon'
+    )

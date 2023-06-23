@@ -43,14 +43,12 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="under-footer">
-
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">Algo Solution</a></p>
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            {% for social in link %}
+                            <li><a href="{{social.link }}">{{ social.icon | safe}}</a></li>
+                            {% endfor%}
                         </ul>
+                        
                     </div>
                 </div>
             </div>

@@ -10,6 +10,7 @@ def layout(request):
     lunch = BussinessLunch.objects.all()
     drink = Drink.objects.all()
     text = TextGoal.objects.all()
+    link = SocialMedia.objects.all()
     context = {
         'logo':logo,
         'mainlogo':mainlogo,
@@ -18,6 +19,7 @@ def layout(request):
         'lunch':lunch,
         'drink':drink,
         'text':text,
+        'link':link,
     }
     return context
 def index(request):
