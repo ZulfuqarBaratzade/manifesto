@@ -23,3 +23,13 @@ class LogoAdmin(admin.ModelAdmin):
     class Meta:
         model = Logo
 
+@admin.register(Food)
+
+class FoodAdmin(admin.ModelAdmin):
+    list_display=['id','order','name','price','file','updated_date','created_date']
+
+    search_fields = ['id','name']
+    list_editable=['file','price']
+
+    class Meta:
+        model = Food
