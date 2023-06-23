@@ -6,7 +6,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="{% url 'index' %}" class="logo">
                             <img src="{{ logo.url }}" width="140" style="position: relative; right: 200px;">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -19,16 +19,16 @@
                                     <li><a href="women">Şirniyyatlar</a></li>
                                     <li><a href="kids">Business Lunch</a></li>
                                     <li><a href="men">İçkilər</a></li>
-                                    <li><a href="women">Manqal menyu</a></li>
                                 </ul>
                             </li>
-                            <li class="submenu">
-                                <a href="javascript:;">Haqqımızda</a>
+                            <li class="submenu" >
+                                 <a class = "scroll-to-section" href="#explore">Haqqımızda</a>
                                 <ul>
                                     <li><a href="men">Xəbərlər</a></li>
                                     <li><a href="women">Vakansiyalar</a></li>
                                     <li><a href="kids">Şikayət və təkliflər</a></li>
                                 </ul>
+                                
                             </li>
                             <li class="scroll-to-section"><a href="#explore">Contact</a></li>
                         </ul>

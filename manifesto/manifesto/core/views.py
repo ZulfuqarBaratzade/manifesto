@@ -8,12 +8,14 @@ def layout(request):
     food = Food.objects.all()
     dessert = Dessert.objects.all()
     lunch = BussinessLunch.objects.all()
+    drink = Drink.objects.all()
     context = {
         'logo':logo,
         'mainlogo':mainlogo,
         'food':food,
         'dessert':dessert,
         'lunch':lunch,
+        'drink':drink,
     }
     return context
 def index(request):
