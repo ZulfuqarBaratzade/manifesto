@@ -10,7 +10,7 @@
     <div class="carousel-inner">
         {% for main in mainlogo %}
       <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
-        <img class="d-block w-100"  src="{{ main.file.url }}" height="900"  style="padding: 100px; position: relative; top: 20px;"  alt="First slide">
+        <img class="d-block w-100"  src="{{ main.file.url }}" height="auto"  style="padding: 150px;  position: relative;"  alt="First slide">
       </div>
       {% endfor %}
     </div>
